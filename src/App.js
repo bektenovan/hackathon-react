@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/Header/Header";
+import "./App.css";
 
 const App = () => {
-  return (
-    <div>
-      hacaton
-    </div>
-  );
+  return <Header />;
 };
 
 export default App;
