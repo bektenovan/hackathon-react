@@ -1,3 +1,39 @@
 {
-  "products": []
+  "products": [
+    {
+      "title": "fjbnlkfdn",
+      "description": "zldkfnl;nzfj",
+      "price": "lfbnmdzlfmn",
+      "image": "lkfnb;ldfnzm",
+      "id": 1
+    },
+    {
+      "title": "lkfnvdmsv",
+      "description": "lf,nd.,mv",
+      "price": "dmvmdv,",
+      "image": "lmdvmsd",
+      "id": 2
+    },
+    {
+      "title": "lkfnvdmsv",
+      "description": "lf,nd.,mv",
+      "price": "dmvmdv,",
+      "image": "lmdvmsd",
+      "id": 3
+    },
+    {
+      "title": ",.mb.fmb/,fx",
+      "description": ",fb .xmcb/,c",
+      "price": ",.fmb.mx,",
+      "image": ".,fb.,m.",
+      "id": 4
+    },
+    {
+      "title": ",m .,.m",
+      "description": "lklklklk",
+      "price": "llklk",
+      "image": "",
+      "id": 5
+    }
+  ]
 }

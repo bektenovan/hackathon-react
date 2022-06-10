@@ -1,8 +1,10 @@
-import axios from "axios";
 import React, { useReducer } from "react";
+import axios from "axios";
 
 export const productsContext = React.createContext();
-const API = "  http://localhost:8000/products";
+
+const API = "http://localhost:8000/products";
+
 const INIT_STATE = {
   products: [],
 };
@@ -14,11 +16,14 @@ function reducer(state = INIT_STATE, action) {
       return state;
   }
 }
+
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  //! create
   async function createProduct(newProduct) {
-    await axios.post(API);
+    await axios.post(API, newProduct);
   }
+  //!read
   async function getProducts() {
     let res = await axios(API);
     // console.log(res)
@@ -27,6 +32,8 @@ const ProductsContextProvider = ({ children }) => {
       payload: res.data,
     });
   }
+  // console.log(state.products)
+
   return (
     <productsContext.Provider
       value={{
