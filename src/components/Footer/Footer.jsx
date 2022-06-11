@@ -14,8 +14,8 @@ export default function Footer() {
       <Box
         px={{ xs: 0, sm: 10 }}
         py={{ xs: 0, sm: 8 }}
-        bgcolor="text.secondary"
-        color={"white"}>
+        // bgcolor="text.secondary"
+        color={"dark"}>
         <Container>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>

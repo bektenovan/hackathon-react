@@ -1,39 +1,25 @@
 {
   "products": [
     {
-      "title": "fjbnlkfdn",
-      "description": "zldkfnl;nzfj",
-      "price": "lfbnmdzlfmn",
-      "image": "lkfnb;ldfnzm",
+      "title": "chair",
+      "description": "kjbkllkjkllllllll",
+      "price": 567,
+      "image": "https://www.collinsdictionary.com/images/full/chair_583020097_1000.jpg",
       "id": 1
     },
     {
-      "title": "lkfnvdmsv",
-      "description": "lf,nd.,mv",
-      "price": "dmvmdv,",
-      "image": "lmdvmsd",
+      "title": "puff",
+      "description": "jhfbvkfbvkf",
+      "price": 765,
+      "image": "https://www.bebitalia.com/media/catalog/product/S/l/Slider_2_386_bebitalia_armchair_Pablo_03.jpg",
       "id": 2
     },
     {
-      "title": "lkfnvdmsv",
-      "description": "lf,nd.,mv",
-      "price": "dmvmdv,",
-      "image": "lmdvmsd",
+      "title": "armchair",
+      "description": "flkv",
+      "price": 7456,
+      "image": "https://indiemarket.news/wp-content/uploads/2020/01/kursi-baca.jpg",
       "id": 3
-    },
-    {
-      "title": ",.mb.fmb/,fx",
-      "description": ",fb .xmcb/,c",
-      "price": ",.fmb.mx,",
-      "image": ".,fb.,m.",
-      "id": 4
-    },
-    {
-      "title": ",m .,.m",
-      "description": "lklklklk",
-      "price": "llklk",
-      "image": "",
-      "id": 5
     }
   ]
 }

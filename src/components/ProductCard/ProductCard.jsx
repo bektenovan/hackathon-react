@@ -1,99 +1,73 @@
-import { ExpandMore } from "@mui/icons-material";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {
-  Avatar,
   Button,
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   CardMedia,
-  Collapse,
-  IconButton,
+  Rating,
   Typography,
 } from "@mui/material";
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import InfoIcon from "@mui/icons-material/Info";
+
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import { productsContext } from "../../contexts/ProductsContext";
-import AddShoppingCartSharpIcon from "@mui/icons-material/AddShoppingCartSharp";
-import ModeEditSharpIcon from "@mui/icons-material/ModeEditSharp";
+// import { CartContext } from "../../contexts/cartContext";
+import { AddShoppingCart } from "@mui/icons-material";
 
 const ProductCard = ({ item }) => {
-  const { deleteProduct, getOneProduct } = useContext(productsContext);
+  const navigate = useNavigate();
+  const { deleteProduct } = useContext(productsContext);
+  // const { addProductToCart, checkProductInCart } = useContext(CartContext);
+  // const [checkProduct, setCheckProduct] = useState(checkProductInCart(item));
+
   // console.log(item);
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
+    <Card sx={{ maxWidth: 345, margin: "10px" }}>
       <CardMedia
         component="img"
-        height="194"
-        image="https://static.dezeen.com/uploads/2022/02/bauhaus-chairs-erich-dieckmann-TYP_dezeen_2364_col_12-scaled.jpg"
-        alt="Paella dish"
+        alt="green iguana"
+        height="200"
+        image={item.image}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+        <Typography gutterBottom variant="h5" component="div">
+          {item.title}
         </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {item.description.length > 20
+            ? `${item.description.slice(0, 20)}...`
+            : item.description}
+        </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+          {item.price}
+        </Typography>
+        <Rating name="simple-controlled" />
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <AddShoppingCartSharpIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ModeEditSharpIcon />
-        </IconButton>
+      <CardActions>
+        {/*! icons added as components */}
+
+        <Button size="small" onClick={() => deleteProduct(item.id)}>
+          <DeleteIcon />
+        </Button>
+        <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+          <EditIcon />
+        </Button>
+        <Button
+          onClick={() => {
+            // addProductToCart(item);
+            // setCheckProduct(checkProductInCart(item));
+          }}
+          size="small">
+          {/* <AddShoppingCart color={checkProduct ? "secondary" : "primary"} /> */}
+        </Button>
+        <Button size="small" onClick={() => navigate(`/products/${item.id}`)}>
+          <InfoIcon />
+        </Button>
       </CardActions>
-      <Collapse timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-            set aside for 10 minutes.
-          </Typography>
-          <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet
-            over medium-high heat. Add chicken, shrimp and chorizo, and cook,
-            stirring occasionally until lightly browned, 6 to 8 minutes.
-            Transfer shrimp to a large plate and set aside, leaving chicken and
-            chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes,
-            onion, salt and pepper, and cook, stirring often until thickened and
-            fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2
-            cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is
-            absorbed, 15 to 18 minutes. Reduce heat to medium-low, add reserved
-            shrimp and mussels, tucking them down into the rice, and cook again
-            without stirring, until mussels have opened and rice is just tender,
-            5 to 7 minutes more. (Discard any mussels that don&apos;t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then
-            serve.
-          </Typography>
-        </CardContent>
-      </Collapse>
     </Card>
   );
 };

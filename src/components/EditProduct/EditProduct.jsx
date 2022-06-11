@@ -7,14 +7,16 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext";
 
 // title, description, price, image
 
-const AddProduct = () => {
-  const { createProduct } = useContext(productsContext);
+const EditProduct = () => {
+  const { getOneProduct, oneProduct, updateProduct } =
+    useContext(productsContext);
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
@@ -23,21 +25,30 @@ const AddProduct = () => {
   const [image, setImage] = useState("");
 
   function handleValues() {
-    let newProduct = {
+    let editedProduct = {
       title,
       description,
       price,
-      // price: +price,
       image,
     };
     if (!title.trim() || !description.trim() || !price || !image.trim()) {
       alert("fill in the blanks!");
       return;
     }
-    createProduct(newProduct);
+    updateProduct(id, editedProduct);
     navigate("/products");
   }
-  // console.log(typeof price);
+  useEffect(() => {
+    getOneProduct(id);
+  }, []);
+  useEffect(() => {
+    if (oneProduct) {
+      setTitle(oneProduct.title);
+      setPrice(oneProduct.price);
+      setImage(oneProduct.image);
+      setDescription(oneProduct.description);
+    }
+  }, [oneProduct]);
   return (
     <Container maxWidth="sm">
       <Breadcrumbs aria-label="breadcrumb">
@@ -47,7 +58,7 @@ const AddProduct = () => {
         <Link underline="hover" color="inherit" href="/products">
           Products
         </Link>
-        <Typography color="text.primary">Add</Typography>
+        <Typography color="text.primary">Edit</Typography>
       </Breadcrumbs>
       <Box
         padding={"30px"}
@@ -55,7 +66,7 @@ const AddProduct = () => {
         display={"flex"}
         flexDirection={"column"}>
         <Typography variant="h4" component="h2">
-          Add New Product
+          Edit Product
         </Typography>
         <TextField
           value={title}
@@ -94,14 +105,12 @@ const AddProduct = () => {
           onClick={handleValues}
           variant="contained"
           color="success"
-          style={{
-            margin: "10px",
-          }}>
-          Add Product
+          style={{ margin: "10px" }}>
+          Save product
         </Button>
       </Box>
     </Container>
   );
 };
 
-export default AddProduct;
+export default EditProduct;
