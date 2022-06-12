@@ -8,6 +8,7 @@ import ProductList from "./components/ProductList/ProductList";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
 import EditProduct from "./components/EditProduct/EditProduct";
 import HomePage from "./components/ProductList/HomePage/Homepage";
+import Details from "./components/Details/Details";
 
 const Routing = () => {
   return (
@@ -20,6 +21,7 @@ const Routing = () => {
         <Route path="/collections" element={<Collections />} />
         <Route path="/edit/:id" element={<EditProduct />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/products/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );

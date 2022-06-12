@@ -5,37 +5,66 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ListSubheader from "@mui/material/ListSubheader";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
+import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
 
 export default function HomePage() {
   return (
-    <ImageList
-      style={{ paddingTop: "70px", marginLeft: "320px" }}
-      sx={{ width: 700, height: 525 }}>
-      <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div"></ListSubheader>
-      </ImageListItem>
-      {itemData.map(item => (
-        <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title={item.title}
-            subtitle={item.author}
-            actionIcon={
-              <IconButton
-                sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                aria-label={`info about ${item.title}`}>
-                <InfoIcon />
-              </IconButton>
-            }
-          />
+    <Box>
+      <Box
+        style={{
+          fontFamily: "Sylvester",
+          paddingTop: "80px",
+        }}>
+        <Typography
+          style={{
+            fontSize: "30px",
+            display: "flex",
+            justifyContent: "center",
+            fontWeight: "bold",
+            color: "#ff77a9",
+          }}>
+          Embrace the mix
+        </Typography>
+        <Typography
+          style={{
+            fontSize: "20px",
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20px",
+          }}>
+          with a variety of furniture styles to create your perfect room
+        </Typography>
+      </Box>
+      <ImageList
+        style={{ marginTop: "70px", marginLeft: "320px" }}
+        sx={{ width: 700, height: 525 }}>
+        <ImageListItem key="Subheader" cols={2}>
+          <ListSubheader component="div"></ListSubheader>
         </ImageListItem>
-      ))}
-    </ImageList>
+        {itemData.map(item => (
+          <ImageListItem key={item.img}>
+            <img
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={item.title}
+              loading="lazy"
+            />
+            <ImageListItemBar
+              title={item.title}
+              subtitle={item.author}
+              actionIcon={
+                <IconButton
+                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                  aria-label={`info about ${item.title}`}>
+                  <InfoIcon />
+                </IconButton>
+              }
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </Box>
   );
 }
 
@@ -66,13 +95,13 @@ const itemData = [
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+    img: "https://res.cloudinary.com/hni-corporation/image/upload/f_auto,q_auto/v1592407607/HON/Chairs/West%20Hill/HON-WestHill-HWH1SS.B.PBLE02.CWLLA1-000-001.jpg",
     title: "Hats",
     author: "@hjrc33",
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+    img: "https://i.pinimg.com/736x/67/96/4c/67964c19e64a523f08688f8f40179f09.jpg",
     title: "Honey",
     author: "@arwinneil",
     rows: 2,
@@ -80,36 +109,25 @@ const itemData = [
     featured: true,
   },
   {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+    img: "https://cdn.shopify.com/s/files/1/0019/2521/8356/products/gray-hammock-chair-limbo-imports-light-t.jpg?v=1649708481",
     title: "Basketball",
     author: "@tjdragotta",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://secure.img1-fg.wfcdn.com/im/06785727/resize-h755-w755%5Ecompr-r85/7005/70059290/84%27%27+Rolled+Arm+Sofa+with+Reversible+Cushions.jpg",
     title: "Fern",
     author: "@katie_wasserman",
   },
   {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+    img: "https://cdn.shopify.com/s/files/1/0503/0074/7976/files/Armchair_1800x.jpg?v=1602843784",
     title: "Mushrooms",
     author: "@silverdalex",
     rows: 2,
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+    img: "https://www.homesourcetx.com/wp-content/uploads/2021/02/New-arrivals-in-Houston-1024x1024.jpg",
     title: "Tomato basil",
     author: "@shelleypauls",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-    author: "@peterlaster",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-    author: "@southside_customs",
-    cols: 2,
   },
 ];

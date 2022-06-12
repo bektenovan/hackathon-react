@@ -42,7 +42,7 @@ const ProductsList = () => {
           margin: "30px",
         }}>
         <Button
-          color="secondary"
+          color="error"
           variant="outlined"
           style={{ marginTop: "30px" }}
           onClick={() => navigate("/add-product")}>

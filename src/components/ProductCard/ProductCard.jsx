@@ -7,7 +7,7 @@ import {
   Rating,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import InfoIcon from "@mui/icons-material/Info";
@@ -17,10 +17,35 @@ import { useContext } from "react";
 import { productsContext } from "../../contexts/ProductsContext";
 // import { CartContext } from "../../contexts/cartContext";
 import { AddShoppingCart } from "@mui/icons-material";
-
-const ProductCard = ({ item }) => {
+import { createTheme } from "@mui/material/styles";
+const theme = createTheme({
+  status: {
+    danger: "#ff77a9",
+  },
+  palette: {
+    primary: {
+      main: "#0971f1",
+      darker: "#053e85",
+    },
+    neutral: {
+      main: "#64748B",
+      contrastText: "#fff",
+    },
+  },
+});
+const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
-  const { deleteProduct } = useContext(productsContext);
+  const { deleteProduct, getOneProduct, oneProduct } =
+    useContext(productsContext);
+  const [ratingValue, setRatingValue] = React.useState(null);
+  console.log(ratingValue);
+  const handleChange = (e, newValue) => {
+    setRatingValue(newValue);
+  };
+  // useEffect(() => {
+  //   getOneProduct(id);
+  // }, [oneProduct]);
+  // console.log(setRatingValue);
   // const { addProductToCart, checkProductInCart } = useContext(CartContext);
   // const [checkProduct, setCheckProduct] = useState(checkProductInCart(item));
 
@@ -45,7 +70,13 @@ const ProductCard = ({ item }) => {
         <Typography gutterBottom variant="h5" component="div">
           {item.price}
         </Typography>
-        <Rating name="simple-controlled" />
+        <Rating
+          precision={0.5}
+          size="large"
+          value={ratingValue}
+          onChange={handleChange}
+          name="simple-controlled"
+        />
       </CardContent>
       <CardActions>
         {/*! icons added as components */}
