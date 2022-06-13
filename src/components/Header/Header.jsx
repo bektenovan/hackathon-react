@@ -13,23 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import LooksIcon from "@mui/icons-material/Looks";
-import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
-  status: {
-    danger: "#e53e3e",
-  },
-  palette: {
-    primary: {
-      main: "#0971f1",
-      darker: "#053e85",
-    },
-    neutral: {
-      main: "#64748B",
-      contrastText: "#fff",
-    },
-  },
-});
 const pages = [, "", "About Us"];
 const settings = ["Profile", "Cart", "Logout"];
 

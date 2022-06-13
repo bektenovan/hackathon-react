@@ -3,7 +3,8 @@ import { Box, Container } from "@mui/system";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext";
-// import Filters from "../../Filters/Filters";
+import Filter from "../Filter/Filter";
+
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductsList = () => {
@@ -31,8 +32,8 @@ const ProductsList = () => {
     getProducts();
   }, [searchParams]);
   // console.log(price);
-  // console.log(searchParams.get("q"));
-  // console.log(window.location.search);
+  console.log(searchParams.get("q"));
+  console.log(window.location.search);
   return (
     <Container>
       <div
@@ -49,12 +50,12 @@ const ProductsList = () => {
           Add Product
         </Button>
         {/* функция удочка  */}
-        {/* <Filters
+        <Filter
           search={search}
           setSearch={setSearch}
           price={price}
           setPrice={setPrice}
-        /> */}
+        />
       </div>
       <Box
         display={"flex"}

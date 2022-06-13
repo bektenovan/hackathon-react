@@ -32,7 +32,8 @@ const ProductsContextProvider = ({ children }) => {
   }
   //! 2. read
   async function getProducts() {
-    // console.log(`${API}${window.location.search}`);
+    console.log(window.location.search);
+    console.log(`${API}${window.location.search}`);
     let res = await axios.get(`${API}${window.location.search}`);
     // console.log(res);
     console.log(state.pages);

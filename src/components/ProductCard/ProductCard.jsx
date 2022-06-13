@@ -17,22 +17,7 @@ import { useContext } from "react";
 import { productsContext } from "../../contexts/ProductsContext";
 // import { CartContext } from "../../contexts/cartContext";
 import { AddShoppingCart } from "@mui/icons-material";
-import { createTheme } from "@mui/material/styles";
-const theme = createTheme({
-  status: {
-    danger: "#ff77a9",
-  },
-  palette: {
-    primary: {
-      main: "#0971f1",
-      darker: "#053e85",
-    },
-    neutral: {
-      main: "#64748B",
-      contrastText: "#fff",
-    },
-  },
-});
+
 const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
   const { deleteProduct, getOneProduct, oneProduct } =
