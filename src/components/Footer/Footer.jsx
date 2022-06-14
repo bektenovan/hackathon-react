@@ -48,12 +48,12 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/login" color="inherit">
                   Log in
                 </Link>
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/register" color="inherit">
                   Register
                 </Link>
               </Box>

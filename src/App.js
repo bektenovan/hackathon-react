@@ -6,14 +6,19 @@ import ProductsContextProvider from "./contexts/ProductsContext";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AuthProductContextProvider from "./contexts/authProductContext";
+import BasketContextProvider from "./contexts/basketContext";
 
 const App = () => {
   return (
     <AuthProductContextProvider>
          <ProductsContextProvider>
+          <BasketContextProvider>
+            <BrowserRouter>
       <Header />
       <Routing />
       <Footer />
+      </BrowserRouter>
+      </BasketContextProvider>
     </ProductsContextProvider>
     </AuthProductContextProvider>
  

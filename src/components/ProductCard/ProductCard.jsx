@@ -18,6 +18,7 @@ import { productsContext } from "../../contexts/ProductsContext";
 // import { CartContext } from "../../contexts/cartContext";
 import { AddShoppingCart } from "@mui/icons-material";
 import { createTheme } from "@mui/material/styles";
+import { basketContext } from "../../contexts/basketContext";
 const theme = createTheme({
   status: {
     danger: "#ff77a9",
@@ -35,6 +36,8 @@ const theme = createTheme({
 });
 const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
+  const { addProductToBasket, checkProductInBasket } = useContext(basketContext);
+  const [checkProduct, setCheckProduct] = useState(checkProductInBasket(item));
   const { deleteProduct, getOneProduct, oneProduct } =
     useContext(productsContext);
   const [ratingValue, setRatingValue] = React.useState(null);
@@ -89,11 +92,11 @@ const ProductCard = ({ item, id }) => {
         </Button>
         <Button
           onClick={() => {
-            // addProductToCart(item);
-            // setCheckProduct(checkProductInCart(item));
+            addProductToBasket(item);
+            setCheckProduct(checkProductInBasket(item));
           }}
           size="small">
-          {/* <AddShoppingCart color={checkProduct ? "secondary" : "primary"} /> */}
+          <AddShoppingCart color={checkProduct ? "secondary" : "primary"} />
         </Button>
         <Button size="small" onClick={() => navigate(`/products/${item.id}`)}>
           <InfoIcon />

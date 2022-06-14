@@ -7,8 +7,10 @@ import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <Box>
       <Box
@@ -55,6 +57,7 @@ export default function HomePage() {
               subtitle={item.author}
               actionIcon={
                 <IconButton
+                  onClick={() => navigate(`/products/:id`)}
                   sx={{ color: "rgba(255, 255, 255, 0.54)" }}
                   aria-label={`info about ${item.title}`}>
                   <InfoIcon />

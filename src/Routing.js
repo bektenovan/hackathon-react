@@ -9,10 +9,11 @@ import RegisterForm from "./components/RegisterForm/RegisterForm";
 import EditProduct from "./components/EditProduct/EditProduct";
 import HomePage from "./components/ProductList/HomePage/Homepage";
 import Details from "./components/Details/Details";
+import Basket from "./components/Basket/Basket";
 
 const Routing = () => {
   return (
-    <BrowserRouter>
+ 
       <Routes>
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
@@ -22,8 +23,9 @@ const Routing = () => {
         <Route path="/edit/:id" element={<EditProduct />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/products/:id" element={<Details />} />
+        <Route path="/basket" element={<Basket />} />
       </Routes>
-    </BrowserRouter>
+
   );
 };
 
