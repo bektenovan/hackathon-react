@@ -64,6 +64,10 @@ const ProductsContextProvider = ({ children }) => {
     getProducts();
   }
 
+  async function changeRating(id, newRating) {
+    await axios.patch(`${API}/${id}`, newRating);
+  }
+
   return (
     <productsContext.Provider
       value={{
@@ -75,6 +79,7 @@ const ProductsContextProvider = ({ children }) => {
         deleteProduct,
         getOneProduct,
         updateProduct,
+        changeRating,
       }}>
       {children}
     </productsContext.Provider>

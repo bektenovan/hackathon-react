@@ -2,7 +2,7 @@ import React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
-// import { Slider } from "@mui/material";
+import { Slider } from "@mui/material";
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -57,7 +57,7 @@ const Filter = ({ search, setSearch, price, setPrice }) => {
           onChange={e => setSearch(e.target.value)}
         />
       </Search>
-      {/* <Slider
+      <Slider
         style={{ width: "200px", marginLeft: "15px" }}
         getAriaLabel={() => "Temperature range"}
         value={price}
@@ -66,7 +66,7 @@ const Filter = ({ search, setSearch, price, setPrice }) => {
         min={1}
         max={10000}
         step={100}
-      /> */}
+      />
     </div>
   );
 };

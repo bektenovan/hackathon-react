@@ -4,6 +4,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Fab,
   Rating,
   Typography,
 } from "@mui/material";
@@ -78,11 +79,11 @@ const ProductCard = ({ item, id }) => {
             // setCheckProduct(checkProductInCart(item));
           }}
           size="small">
-          {/* <AddShoppingCart color={checkProduct ? "secondary" : "primary"} /> */}
+          <AddShoppingCart />
         </Button>
-        <Button size="small" onClick={() => navigate(`/products/${item.id}`)}>
+        <Fab size="small" onClick={() => navigate(`/products/${item.id}`)}>
           <InfoIcon />
-        </Button>
+        </Fab>
       </CardActions>
     </Card>
   );

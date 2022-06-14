@@ -33,7 +33,7 @@ const ProductsList = () => {
   }, [searchParams]);
   // console.log(price);
   console.log(searchParams.get("q"));
-  console.log(window.location.search);
+  // console.log(window.location.search);
   return (
     <Container>
       <div
@@ -45,7 +45,6 @@ const ProductsList = () => {
         <Button
           color="error"
           variant="outlined"
-          style={{ marginTop: "30px" }}
           onClick={() => navigate("/add-product")}>
           Add Product
         </Button>
@@ -76,7 +75,7 @@ const ProductsList = () => {
           page={page}
           onChange={(e, value) => setPage(value)}
           count={pages}
-          variant="outlined"
+          // variant="outlined"
           shape="rounded"
         />
       </Box>
