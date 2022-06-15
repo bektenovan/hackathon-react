@@ -13,11 +13,7 @@ const App = () => {
     <AuthProductContextProvider>
       <ProductsContextProvider>
         <BasketContextProvider>
-          <BrowserRouter>
-            <Header />
-            <Routing />
-            <Footer />
-          </BrowserRouter>
+          <Routing />
         </BasketContextProvider>
       </ProductsContextProvider>
     </AuthProductContextProvider>
