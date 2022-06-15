@@ -1,3 +1,37 @@
 {
-    "products": []
+  "products": [
+    {
+      "title": "armchair",
+      "description": "flkv",
+      "price": 7456,
+
+      "image": "https://indiemarket.news/wp-content/uploads/2020/01/kursi-baca.jpg",
+      "id": 3
+    },
+    {
+      "3": "",
+      "title": "sofa",
+      "description": "jhfgjkgkhg",
+      "rating": 2,
+      "price": 564,
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/amazon-rivet-furniture-1533048038.jpg?crop=1.00xw:0.502xh;0,0.423xh&resize=1200:*",
+      "id": 4
+    },
+    {
+      "title": "bed",
+      "description": "fbkjdv",
+      "rating": 2,
+      "price": 765,
+      "image": "https://danubehome.in/images/Bed%20Sets/Bed%20Sets2.jpg",
+      "id": 5
+    },
+    {
+      "title": "пуфик",
+      "description": "лоилыват",
+      "rating": 2,
+      "price": 7456,
+      "image": "https://pufoff.ru/assets/images/products/204/oxford-orange.png",
+      "id": 7
+    }
+  ]
 }

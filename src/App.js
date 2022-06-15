@@ -1,10 +1,22 @@
-import React from 'react';
+import React from "react";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Routing from "./Routing";
+import ProductsContextProvider from "./contexts/ProductsContext";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import AuthProductContextProvider from "./contexts/authProductContext";
+import BasketContextProvider from "./contexts/basketContext";
 
 const App = () => {
   return (
-    <div>
-      hacaton
-    </div>
+    <AuthProductContextProvider>
+      <ProductsContextProvider>
+        <BasketContextProvider>
+          <Routing />
+        </BasketContextProvider>
+      </ProductsContextProvider>
+    </AuthProductContextProvider>
   );
 };
 
