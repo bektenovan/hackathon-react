@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import axios from "axios";
 
 export const productsContext = React.createContext();
-const API = "  http://localhost:8000/products";
+const API = " http://localhost:8001/products";
 
 const INIT_STATE = {
   products: [],

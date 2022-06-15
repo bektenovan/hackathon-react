@@ -15,28 +15,26 @@ import AdbIcon from "@mui/icons-material/Adb";
 import LooksIcon from "@mui/icons-material/Looks";
 import { createTheme } from "@mui/material/styles";
 import { Link, useNavigate } from "react-router-dom";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { Badge } from "@mui/material";
 import { authProductContext } from "../../contexts/authProductContext";
 import { basketContext } from "../../contexts/basketContext";
 import { useContext } from "react";
 import { useEffect } from "react";
 
-const pages = [, "", "About Us"];
+const pages = [, "", ""];
 const settings = ["Profile", "Cart", "Logout"];
 
 const Header = () => {
-
-  const { count, getBasket } = useContext(basketContext)
+  const { count, getBasket } = useContext(basketContext);
   console.log(getBasket);
   useEffect(() => {
-    getBasket()
-  }, [])
+    getBasket();
+  }, []);
 
   // const { currentUser, logOut } =React.useContext(authProductContext);
   // console.log(currentUser);
   // const navigate = useNavigate();
-
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -58,7 +56,7 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Box color={"white"} bgcolor="#ffffff">
+      <Box color={"white"} bgcolor="black">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <LooksIcon
@@ -92,7 +90,7 @@ const Header = () => {
                 fontFamily: "Sylvester",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "Black ",
+                color: "White",
                 textDecoration: "none",
               }}>
               Products
@@ -108,7 +106,7 @@ const Header = () => {
                 fontFamily: "Sylvester",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "Black ",
+                color: "White",
                 textDecoration: "none",
               }}>
               Collections
@@ -124,7 +122,7 @@ const Header = () => {
                 fontFamily: "Sylvester",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "Black ",
+                color: "White ",
                 textDecoration: "none",
               }}>
               AboutUs
@@ -192,19 +190,17 @@ const Header = () => {
               ))}
             </Box>
 
-
             <Link to="/basket">
               <IconButton
+                style={{ marginRight: "30px" }}
                 size="large"
                 aria-label="show 17 new notifications"
-                color="inherit"
-              >
+                color="inherit">
                 <Badge badgeContent={count} color="error">
-                  <AddShoppingCartIcon />
+                  <AddShoppingCartIcon style={{ color: "#ff77a9" }} />
                 </Badge>
               </IconButton>
             </Link>
-
 
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
