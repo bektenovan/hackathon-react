@@ -13,11 +13,31 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import LooksIcon from "@mui/icons-material/Looks";
+import { createTheme } from "@mui/material/styles";
+import { Link, useNavigate } from "react-router-dom";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Badge } from "@mui/material";
+import { authProductContext } from "../../contexts/authProductContext";
+import { basketContext } from "../../contexts/basketContext";
+import { useContext } from "react";
+import { useEffect } from "react";
 
 const pages = [, "", "About Us"];
 const settings = ["Profile", "Cart", "Logout"];
 
 const Header = () => {
+
+  const { count, getBasket } = useContext(basketContext)
+  console.log(getBasket);
+  useEffect(() => {
+    getBasket()
+  }, [])
+
+  // const { currentUser, logOut } =React.useContext(authProductContext);
+  // console.log(currentUser);
+  // const navigate = useNavigate();
+
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -171,6 +191,20 @@ const Header = () => {
                 </Button>
               ))}
             </Box>
+
+
+            <Link to="/basket">
+              <IconButton
+                size="large"
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                <Badge badgeContent={count} color="error">
+                  <AddShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </Link>
+
 
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">

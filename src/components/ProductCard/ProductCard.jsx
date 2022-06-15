@@ -4,7 +4,6 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Fab,
   Rating,
   Typography,
 } from "@mui/material";
@@ -18,9 +17,27 @@ import { useContext } from "react";
 import { productsContext } from "../../contexts/ProductsContext";
 // import { CartContext } from "../../contexts/cartContext";
 import { AddShoppingCart } from "@mui/icons-material";
-
+import { createTheme } from "@mui/material/styles";
+import { basketContext } from "../../contexts/basketContext";
+const theme = createTheme({
+  status: {
+    danger: "#ff77a9",
+  },
+  palette: {
+    primary: {
+      main: "#0971f1",
+      darker: "#053e85",
+    },
+    neutral: {
+      main: "#64748B",
+      contrastText: "#fff",
+    },
+  },
+});
 const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
+  const { addProductToBasket, checkProductInBasket } = useContext(basketContext);
+  const [checkProduct, setCheckProduct] = useState(checkProductInBasket(item));
   const { deleteProduct, getOneProduct, oneProduct } =
     useContext(productsContext);
   const [ratingValue, setRatingValue] = React.useState(null);
@@ -75,15 +92,15 @@ const ProductCard = ({ item, id }) => {
         </Button>
         <Button
           onClick={() => {
-            // addProductToCart(item);
-            // setCheckProduct(checkProductInCart(item));
+            addProductToBasket(item);
+            setCheckProduct(checkProductInBasket(item));
           }}
           size="small">
-          <AddShoppingCart />
+          <AddShoppingCart color={checkProduct ? "secondary" : "primary"} />
         </Button>
-        <Fab size="small" onClick={() => navigate(`/products/${item.id}`)}>
+        <Button size="small" onClick={() => navigate(`/products/${item.id}`)}>
           <InfoIcon />
-        </Fab>
+        </Button>
       </CardActions>
     </Card>
   );
