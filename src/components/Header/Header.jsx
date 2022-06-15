@@ -22,7 +22,7 @@ import { basketContext } from "../../contexts/basketContext";
 import { useContext } from "react";
 import { useEffect } from "react";
 
-const pages = [, "", "About Us"];
+const pages = [, "", ""];
 const settings = ["Profile", "Cart", "Logout"];
 
 const Header = () => {
@@ -58,7 +58,7 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Box color={"white"} bgcolor="#ffffff">
+      <Box color={"white"} bgcolor="black">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <LooksIcon
@@ -92,7 +92,7 @@ const Header = () => {
                 fontFamily: "Sylvester",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "Black ",
+                color: "white ",
                 textDecoration: "none",
               }}>
               Products
@@ -108,7 +108,7 @@ const Header = () => {
                 fontFamily: "Sylvester",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "Black ",
+                color: "white ",
                 textDecoration: "none",
               }}>
               Collections
@@ -124,7 +124,7 @@ const Header = () => {
                 fontFamily: "Sylvester",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "Black ",
+                color: "white ",
                 textDecoration: "none",
               }}>
               AboutUs
@@ -195,12 +195,13 @@ const Header = () => {
 
             <Link to="/basket">
               <IconButton
+                style={{ marginRight: "30px" }}
                 size="large"
                 aria-label="show 17 new notifications"
                 color="inherit"
               >
-                <Badge badgeContent={count} color="error">
-                  <AddShoppingCartIcon />
+                <Badge badgeContent={count} color="error" >
+                  <AddShoppingCartIcon style={{ color: "#ff77a9" }} />
                 </Badge>
               </IconButton>
             </Link>
