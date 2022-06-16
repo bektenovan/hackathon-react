@@ -21,6 +21,8 @@ import { authProductContext } from "../../contexts/authProductContext";
 import { basketContext } from "../../contexts/basketContext";
 import { useContext } from "react";
 import { useEffect } from "react";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Favorite from "@mui/icons-material/Favorite";
 
 const pages = [, "", ""];
 const settings = ["Profile", "Cart", "Logout"];
@@ -205,6 +207,8 @@ const Header = () => {
                 </Badge>
               </IconButton>
             </Link>
+
+
 
 
             <Box sx={{ flexGrow: 0 }}>

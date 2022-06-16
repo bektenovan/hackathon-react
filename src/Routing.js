@@ -13,6 +13,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Basket from "./components/Basket/Basket"
 import OrderForm from "./components/OrderForm/OrderForm";
+import Comments from "./components/Comments/Comments"
+import Like from "./components/Like/Like";
 
 const Routing = () => {
   return (
@@ -26,8 +28,12 @@ const Routing = () => {
         <Route path="/collections" element={<Collections />} />
         <Route path="/edit/:id" element={<EditProduct />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/products/:id" element={<Details />} />
+        <Route path="/products/:id" element={<><Details /><Like/> <Comments
+        commentsUrl="http://localhost:3004/comments"
+        currentUserId="1"
+      /></>} />
         <Route path="/basket" element={<><Basket /> <OrderForm/> </>} />
+       
       </Routes>
       <Footer />
     </BrowserRouter>

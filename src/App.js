@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import AuthProductContextProvider from "./contexts/authProductContext";
 import BasketContextProvider from "./contexts/basketContext";
 
+
 const App = () => {
   return (
     <AuthProductContextProvider>
