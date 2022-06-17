@@ -15,6 +15,7 @@ import Basket from "./components/Basket/Basket"
 import OrderForm from "./components/OrderForm/OrderForm";
 import Comments from "./components/Comments/Comments"
 import Like from "./components/Like/Like";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const Routing = () => {
   return (
@@ -33,6 +34,7 @@ const Routing = () => {
         currentUserId="1"
       /></>} />
         <Route path="/basket" element={<><Basket /> <OrderForm/> </>} />
+        <Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
        
       </Routes>
       <Footer />

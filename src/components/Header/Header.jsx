@@ -83,6 +83,7 @@ const Header = () => {
               }}>
               Rainbow
             </Typography>
+
             <Typography
               variant="h6"
               noWrap
@@ -119,7 +120,7 @@ const Header = () => {
               variant="h6"
               noWrap
               component="a"
-              href="/collections"
+              href="/about-us"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
