@@ -12,3 +12,67 @@ footer {
 .btn-lg{
 background-color: #ff77a9;
 }
+.circle{
+  border-radius: 100px;
+    border: 3px solid black; 
+    box-shadow: 0 0 7px #666; 
+}
+.col-lg-4 img{
+margin-left: 50px;
+}
+.btn-circle{
+  background-color: #ff77a9;
+width: 128px;
+margin-left: 80px;
+ 
+}
+.text{
+background-color: rgba(255, 228, 196, 0.533);
+display: block;
+/* justify-content: center; */
+text-align: center;
+}
+.text h2{
+  margin-top: 70px;
+}
+.text p{
+  margin-top:70px;
+}
+.full-text{
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  width: 500px;
+  margin-left: 500px;
+  padding-bottom: 50px;
+
+
+}
+.fullscreen-bg {
+  padding-top:30%;
+}
+
+.fullscreen-bg{
+background-image: url(https://cdn-flpnm.nitrocdn.com/lvjcfcPSyMNaZjmvgvFeQPxehzGEkFTu/assets/static/optimized/wp-content/uploads/2021/11/f97495d5a7fe1aae1d07088629fb7b1c.P1177259-2-min-copy-min-1-scaled.jpg
+);
+background-size: 100%;
+}
+.sec-img{
+  background-image: url(https://cdn-flpnm.nitrocdn.com/lvjcfcPSyMNaZjmvgvFeQPxehzGEkFTu/assets/static/optimized/wp-content/uploads/2021/07/95afb673c5e17b7cbd6d4aab4fdbaf28.fcc.jpg) ;
+padding-top: 40%;
+}
+.text-about{
+  display: block;
+  text-align: center;
+}
+.text-about h2{
+  margin-top: 70px;
+}
+.text-about p{
+  margin-top: 70px;
+}
+.info{
+  width: 100%;
+background-color: rgba(102, 102, 102, 0.102);
+}
