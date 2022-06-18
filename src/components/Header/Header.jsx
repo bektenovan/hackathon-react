@@ -21,6 +21,8 @@ import { authProductContext } from "../../contexts/authProductContext";
 import { basketContext } from "../../contexts/basketContext";
 import { useContext } from "react";
 import { useEffect } from "react";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Favorite from "@mui/icons-material/Favorite";
 
 const pages = [, "", ""];
 const settings = ["Profile", "Cart", "Logout"];
@@ -56,11 +58,11 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Box color={"white"} bgcolor="black">
+      <Box color={"black"} bgcolor="white">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <LooksIcon
-              style={{ color: "white" }}
+              style={{ color: "#ff77a9" }}
               sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
             />
             <Typography
@@ -71,14 +73,14 @@ const Header = () => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Sylvester",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
+                fontFamily: "GT America Burrow",
+                height: "3.rem",
                 color: "#ff77a9",
                 textDecoration: "none",
               }}>
               Rainbow
             </Typography>
+
             <Typography
               variant="h6"
               noWrap
@@ -87,10 +89,10 @@ const Header = () => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Sylvester",
+                fontFamily: " GT America Burrow",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "White",
+                letterSpacing: ".2rem",
+                color: "black",
                 textDecoration: "none",
               }}>
               Products
@@ -103,10 +105,10 @@ const Header = () => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Sylvester",
+                fontFamily: " GT America Burrow",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "White",
+                letterSpacing: ".2rem",
+                color: "black",
                 textDecoration: "none",
               }}>
               Collections
@@ -115,14 +117,14 @@ const Header = () => {
               variant="h6"
               noWrap
               component="a"
-              href="/collections"
+              href="/about-us"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Sylvester",
+                fontFamily: " GT America Burrow",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "White ",
+                letterSpacing: ".2rem",
+                color: "black",
                 textDecoration: "none",
               }}>
               AboutUs
@@ -171,9 +173,9 @@ const Header = () => {
                 mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontFamily: "monospace",
+                fontFamily: " GT America Burrow",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
+                letterSpacing: ".2rem",
                 color: "inherit",
                 textDecoration: "none",
               }}>
@@ -197,7 +199,7 @@ const Header = () => {
                 aria-label="show 17 new notifications"
                 color="inherit">
                 <Badge badgeContent={count} color="error">
-                  <AddShoppingCartIcon style={{ color: "#ff77a9" }} />
+                  <AddShoppingCartIcon style={{ color: "black" }} />
                 </Badge>
               </IconButton>
             </Link>

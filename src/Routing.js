@@ -13,8 +13,12 @@ import OrderForm from "./components/OrderForm/OrderForm";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Basket from "./components/Basket/Basket";
+import FieldCollection from "./components/Collections/FieldCollection/FieldCollection";
 
 import CommentsForm from "./components/CommentsForm/CommentsForm";
+import AboutUs from "./components/AboutUs/AboutUs";
+import RangeCollection from "./components/Collections/RangeCollection/RangeCollection";
+import NomadCollection from "./components/Collections/NomadCollection/NomadCollection";
 const Routing = () => {
   return (
     <BrowserRouter>
@@ -28,6 +32,7 @@ const Routing = () => {
         <Route path="/edit/:id" element={<EditProduct />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/products/:id" element={<Details />} />
+        <Route path="/about-us" element={<AboutUs />} />
 
         <Route
           path="/basket"
@@ -38,6 +43,9 @@ const Routing = () => {
           }
         />
         <Route path="/comments" element={<CommentsForm />} />
+        <Route path="/field-collection" element={<FieldCollection />} />
+        <Route path="/range-collection" element={<RangeCollection />} />
+        <Route path="/nomad-collection" element={<NomadCollection />} />
       </Routes>
       <Footer />
     </BrowserRouter>

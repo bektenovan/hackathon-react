@@ -36,7 +36,8 @@ const theme = createTheme({
 });
 const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
-  const { addProductToBasket, checkProductInBasket } = useContext(basketContext);
+  const { addProductToBasket, checkProductInBasket } =
+    useContext(basketContext);
   const [checkProduct, setCheckProduct] = useState(checkProductInBasket(item));
   const { deleteProduct, getOneProduct, oneProduct } =
     useContext(productsContext);
