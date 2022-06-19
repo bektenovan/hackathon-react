@@ -12,7 +12,7 @@
       "title": "Balboa Counter Stool - Mist",
       "description": "We’ve always admired rattan and its power to elevate without a lot of fuss. Here, artisans start with a beautifully proportioned mahogany frame and weave the rattan by hand to achieve perfect texture. Our exclusive finish captures rattan’s nuanced depth, highlighting the artistry of the weave. Everything about this piece reflects thoughtful design – from the gently angled lines to the brass end caps on each leg. Comes with a perfectly tailored cushion in multiple fabrics options so you can switch up your look with ease.",
       "rating": 2,
-      "price": 860,
+      "price": 1000,
       "image": "https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dwc51a4c9e/hi-res/CAT_Balboa_Counter_Stool-0249.jpg?sw=1600&sh=2000&sm=fit&strip=false",
       "id": 4
     },
@@ -87,6 +87,13 @@
       "price": 3.799,
       "image": "https://cb2.scene7.com/is/image/CB2/EmbassyBlackLoungeChairAVSHF21/$web_pdp_main_carousel_lg$/210715162823/embassy-black-lounge-chair-314-and-ottoman-310-set.jpg",
       "id": 15
+    },
+    {
+      "title": "Vesper Fabric Lounge Chair",
+      "description": "Vesper Fabric Lounge Chair",
+      "price": 2000,
+      "image": "dhvfjbbjbb",
+      "id": 16
     }
   ]
 }

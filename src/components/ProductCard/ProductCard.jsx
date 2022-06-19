@@ -20,6 +20,7 @@ import { AddShoppingCart } from "@mui/icons-material";
 import { createTheme } from "@mui/material/styles";
 import { basketContext } from "../../contexts/basketContext";
 import { authProductContext } from "../../contexts/authProductContext";
+import { Box } from "@mui/system";
 const theme = createTheme({
   status: {
     danger: "#ff77a9",
@@ -56,55 +57,57 @@ const ProductCard = ({ item, id }) => {
 
   // console.log(item);
   return (
-    <Card sx={{ maxWidth: 345, margin: "10px" }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="200"
-        image={item.image}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {item.description.length > 20
-            ? `${item.description.slice(0, 20)}...`
-            : item.description}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.price}
-        </Typography>
-        <Rating
-          precision={0.5}
-          size="large"
-          value={ratingValue}
-          onChange={handleChange}
-          name="simple-controlled"
+    <Box className="cart">
+      <Card sx={{ maxWidth: 345, margin: "10px" }}>
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="200"
+          image={item.image}
         />
-      </CardContent>
-      <CardActions>
-        {/*! icons added as components */}
-        {isAdmin ? (<><Button size="small" onClick={() => deleteProduct(item.id)}>
-          <DeleteIcon />
-        </Button>
-          <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-            <EditIcon />
-          </Button> </>) : null}
+        <CardContent className="carts">
+          <Typography className="carts" gutterBottom variant="h5" component="div">
+            {item.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {item.description.length > 20
+              ? `${item.description.slice(0, 20)}...`
+              : item.description}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+            {item.price}
+          </Typography>
+          <Rating
+            precision={0.5}
+            size="large"
+            value={ratingValue}
+            onChange={handleChange}
+            name="simple-controlled"
+          />
+        </CardContent>
+        <CardActions>
+          {/*! icons added as components */}
+          {isAdmin ? (<><Button size="small" onClick={() => deleteProduct(item.id)}>
+            <DeleteIcon />
+          </Button>
+            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+              <EditIcon />
+            </Button> </>) : null}
 
-        <Button
-          onClick={() => {
-            addProductToBasket(item);
-            setCheckProduct(checkProductInBasket(item));
-          }}
-          size="small">
-          <AddShoppingCart color={checkProduct ? "secondary" : "primary"} />
-        </Button>
-        <Button size="small" onClick={() => navigate(`/products/${item.id}`)}>
-          <InfoIcon />
-        </Button>
-      </CardActions>
-    </Card>
+          <Button
+            onClick={() => {
+              addProductToBasket(item);
+              setCheckProduct(checkProductInBasket(item));
+            }}
+            size="small">
+            <AddShoppingCart color={checkProduct ? "secondary" : "primary"} />
+          </Button>
+          <Button size="small" onClick={() => navigate(`/products/${item.id}`)}>
+            <InfoIcon />
+          </Button>
+        </CardActions>
+      </Card>
+    </Box>
   );
 };
 

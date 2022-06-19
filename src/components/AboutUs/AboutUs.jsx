@@ -4,12 +4,11 @@ const AboutUs = () => {
     return (
 
         <div>
-            <div class="fullscreen-bg" >
-                <div class="full-text" >
-                    <h1>About Us<h6>Our team consists of designers and artists who all share the same love and appreciation for craftsmanship. Together, we are improving our handcrafted techniques and discovering new methods to craft. Our goal is to shine a new light on handcrafted furniture.</h6></h1>
+            <div class="col-md-15" >
+                <img width="100%" src="https://cdn-flpnm.nitrocdn.com/lvjcfcPSyMNaZjmvgvFeQPxehzGEkFTu/assets/static/optimized/wp-content/uploads/2021/11/f97495d5a7fe1aae1d07088629fb7b1c.P1177259-2-min-copy-min-1-scaled.jpg" alt="" />
 
-                </div>
-                <div class="sec-img"></div>
+                <img width="100%" src="https://cdn-flpnm.nitrocdn.com/lvjcfcPSyMNaZjmvgvFeQPxehzGEkFTu/assets/static/optimized/wp-content/uploads/2021/07/95afb673c5e17b7cbd6d4aab4fdbaf28.fcc.jpg" alt="" />
+
             </div>
             <hr class="featurette-divider" />
 

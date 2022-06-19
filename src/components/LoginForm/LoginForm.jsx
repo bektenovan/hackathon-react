@@ -22,7 +22,7 @@ const LoginForm = () => {
 
   return (
 
-    <Box display={"flex"} flexDirection={"row"} justifyContent={"space-evenly"} marginTop={"20px"} >
+    <Box className="log" display={"flex"} flexDirection={"row"} justifyContent={"space-evenly"} marginTop={"20px"} >
       <Box className="log-box"
         display={"flex"}
         flexDirection={"column"}
@@ -70,7 +70,7 @@ const LoginForm = () => {
           Sign Up
         </Typography>
       </Box>
-      <img width="700" height="570" src="https://i.pinimg.com/originals/53/c5/e4/53c5e4b1b7475e0b4e70247aaa4b65e9.gif
+      <img  width="700" height="570" src="https://i.pinimg.com/originals/53/c5/e4/53c5e4b1b7475e0b4e70247aaa4b65e9.gif
 " ></img>
     </Box>
     //https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-SerenaLily-Library/default/dw94cddcb8/0000_page-designer/homepages/2022/0607_summer_d3/mobile/BalboaDining_Mobile.jpg?sw=576&sfrm=jpg

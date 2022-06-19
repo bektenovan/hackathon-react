@@ -19,7 +19,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <Box display={"flex"} flexDirection={"row"} justifyContent={"space-evenly"} marginTop={"20px"} >
+    <Box className="log" display={"flex"} flexDirection={"row"} justifyContent={"space-evenly"} marginTop={"20px"} >
       <Box className="log-box"
         display={"flex"}
         flexDirection={"column"}

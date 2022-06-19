@@ -69,7 +69,7 @@ const ProductsList = () => {
           <ProductCard key={item.id} item={item} />
         ))}
       </Box>
-      <Box
+      <Box className='pagin'
         style={{
           display: "flex",
           justifyContent: "center",

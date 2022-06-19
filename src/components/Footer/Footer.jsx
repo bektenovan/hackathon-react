@@ -11,7 +11,7 @@ import { Grid, Link } from "@mui/material";
 export default function Footer() {
   return (
     <footer>
-      <Box
+      <Box 
         px={{ xs: 0, sm: 10 }}
         py={{ xs: 0, sm: 8 }}
         // bgcolor="text.secondary"
@@ -79,7 +79,7 @@ export default function Footer() {
               </Box>
             </Grid>
           </Grid>
-          <Box
+          <Box className="footname"
             textAlign={"center"}
             pt={{ xs: 5, sm: 10 }}
             pb={{ xs: 5, sm: 0 }}>
