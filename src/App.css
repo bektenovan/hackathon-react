@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 footer {
-  padding-top: 50px;
+  padding-top: 0px;
 }
 .carousel-caption{
   background-color: rgba(158, 153, 153, 0.471);
@@ -75,4 +75,21 @@ padding-top: 40%;
 .info{
   width: 100%;
 background-color: rgba(102, 102, 102, 0.102);
+}
+
+.log-box{
+  background-color: rgba(250, 235, 215, 0.606);
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add{
+  background-image: url(https://media.graphassets.com/resize=w:2400,h:1188,fit:crop/output=format:webp/compress/YiLYKcCoQQ6ZybXRkGGa);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+.add-box{
+  background-color: rgba(255, 255, 255, 0.226);
+
 }
