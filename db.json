@@ -1,38 +1,92 @@
 {
   "products": [
     {
-      "title": "armchair",
-      "description": "flkv",
-      "price": 7456,
-
-      "image": "https://indiemarket.news/wp-content/uploads/2020/01/kursi-baca.jpg",
+      "title": "Avery Accent Chair",
+      "description": "The sculptural lines of this accent chair cast a refined profile, while its plush seat and winged back offer a cozy appeal that will make it the coveted landing spot in any room. Style it with a soft throw as a comfy corner chair in a home office or reading nook.",
+      "price": 2.698,
+      "image": "https://cdn.shopify.com/s/files/1/0299/2822/6915/products/20210728-FallStudioLifestyle1126-SITECROP_bb8a9373-6688-456c-89e3-5a6f91572ec1_1000x.jpg?v=1651255661",
       "id": 3
     },
     {
       "3": "",
-      "title": "sofa",
-      "description": "jhfgjkgkhg",
+      "title": "Balboa Counter Stool - Mist",
+      "description": "We’ve always admired rattan and its power to elevate without a lot of fuss. Here, artisans start with a beautifully proportioned mahogany frame and weave the rattan by hand to achieve perfect texture. Our exclusive finish captures rattan’s nuanced depth, highlighting the artistry of the weave. Everything about this piece reflects thoughtful design – from the gently angled lines to the brass end caps on each leg. Comes with a perfectly tailored cushion in multiple fabrics options so you can switch up your look with ease.",
       "rating": 2,
-      "price": 564,
-      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/amazon-rivet-furniture-1533048038.jpg?crop=1.00xw:0.502xh;0,0.423xh&resize=1200:*",
+      "price": 860,
+      "image": "https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dwc51a4c9e/hi-res/CAT_Balboa_Counter_Stool-0249.jpg?sw=1600&sh=2000&sm=fit&strip=false",
       "id": 4
     },
     {
-      "title": "bed",
-      "description": "fbkjdv",
+      "title": "Riviera Dining Chair",
+      "description": "The classic Parisian bistro chair, reinvented. True to its roots, each rattan frame is crafted in a time-honored technique perfected by the French, bent and shaped by hand until the iconic shape is achieved. The handwoven seats offer just enough give to keep things comfortable. They’re also incredibly durable and a breeze to clean, making them fabulously family-friendly and great for dining spaces.",
       "rating": 2,
       "price": 765,
-      "image": "https://danubehome.in/images/Bed%20Sets/Bed%20Sets2.jpg",
+      "image": "https://www.serenaandlily.com/dw/image/v2/AASD_PRD/on/demandware.static/-/Sites-masterCatalog_SerenaandLily/default/dw59aecbfa/hi-res/DIN_Hayes_Riviera-0311.jpg?sw=1600&sh=2000&sm=fit&strip=false",
       "id": 5
     },
     {
-      "title": "пуфик",
-      "description": "лоилыват",
+      "title": "ANDES ACACIA BED",
+      "description": "Acacia veneer platform bed integrates headboard nightstands with two cantilevered shelves each—one wide for books, one narrow with discreet cord cutouts for your light/phone/alarm clock. Ledge extends around mattress and hovers over corner block feet. Headboard is just the right height for pillow propping, too. Learn about Mark Daniel on our blog. CB2 exclusive.",
       "rating": 2,
-      "price": 7456,
-      "image": "https://pufoff.ru/assets/images/products/204/oxford-orange.png",
+      "price": 7500,
+      "image": "https://cb2.scene7.com/is/image/CB2/AndesQueenBedAcaciaSHS21_1x1/$web_pdp_main_carousel_lg$/210203123042/andes-acacia-queen-bed.jpg",
       "id": 7
+    },
+    {
+      "title": "Field 3-Piece Sofa",
+      "description": "he standard, three-seat sofa configuration of our Field Collection. Designed to accommodate a wide spectrum of styles, Field is a versatile couch that, true to our promise of adaptable furniture, can grow to fit your space with additional modules in the future. Hallmarks of the collection include deeper seats, plush cushions, and premium polyester fabric — keep scrolling to get the full story.",
+      "price": 1494,
+      "image": "https://media.graphassets.com/resize=w:2400,fit:crop/output=format:webp/compress/xehq1HwZRCKpJVOtfLnh",
+      "id": 8
+    },
+    {
+      "title": "Vesper Fabric Lounge Chair",
+      "description": "About this piece Vesper is a visually striking, statement design that still meets our high standard for functionality. It builds upon a long legacy of molded plywood lounge chairs, and takes a step beyond homage: the custom-pressed shell was engineered to offer a comfortably reclined seat, but also to nest for efficient shipping and easy setup — just the sort of thoughtful touch you’ve come to expect from Burrow.",
+      "price": 1105,
+      "image": "https://media.graphassets.com/resize=w:2400,fit:crop/output=format:webp/compress/7cQAgorQgi1NRSjZ4PpW",
+      "id": 9
+    },
+    {
+      "title": "BOWTIE CREAM WOOL SOFA MODEL 3127",
+      "description": "Bowtie Cream Wool Sofa Model 3127 86\"Wx33.25\"Dx32\"H Designed by Paul McCobb 90% wool, 10% acrylic upholstery in ivory Linen welt in ivory FSC ®-certified wood frame and legs with black satin finish Spot-clean with water-free cleaning solvent; do not use water Vacuum regularly; professional upholstery cleaning recommended Imported See product label or call customer service for additional details on product content",
+      "price": 2600,
+      "image": "https://cb2.scene7.com/is/image/CB2/BowtieCreamWoolSofaSHF21/$web_pdp_main_carousel_lg$/210708100831/bowtie-cream-wool-sofa-model-3127.jpg",
+      "id": 10
+    },
+    {
+      "title": "FITZ GREEN VELVET SWIVEL CHAIR",
+      "description": "Channel-tufted in rich green velvet, deco-inspired chair makes a vintage statement wherever it sits. Designed by VUUE with a swivel base, chair looks good from every angle. CB2 exclusive. CB2 exclusive.",
+      "price": 999,
+      "image": "https://cb2.scene7.com/is/image/CB2/FitzGreenVelvetChairSHS22/$web_pdp_main_carousel_lg$/220210163524/fitz-green-velvet-swivel-chair.jpg",
+      "id": 11
+    },
+    {
+      "title": "GWYNETH IVORY BOUCLE CHAIR SET OF 2",
+      "description": "Cozy chair from the goop x CB2 collection is \"proof that things don't have to be cold and hard to be chic,\" says Gwyneth Paltrow. \"We're taking the compromise out of the equation with chic furniture that's to be lived in and loved.\" Lush, texture-rich fabric feels like a true boucle (for a much lower price). Generously scaled with a mod silhouette that feels slightly vintage and totally high-end. CB2 exclusive.",
+      "price": 1.899,
+      "image": "https://cb2.scene7.com/is/image/CB2/GPGwynethBclChrBlcWhtSHF18_1x1/$web_pdp_main_carousel_lg$/190905023639/gwyneth-boucle-chair.jpg",
+      "id": 12
+    },
+    {
+      "title": "NOELIE RATTAN LOUNGE CHAIR WITH WHITE CUSHION",
+      "description": "Mindi wood and rattan lounge chair brings alfresco vibes indoors. Warm mindi wood frames a strong silhouette, while Indonesian rattan curves to shape the back and seat. White seat cushion is extra-plush and discreetly fastens with velcro straps to keep from sliding. CB2 exclusive.",
+      "price": 499,
+      "image": "https://cb2.scene7.com/is/image/CB2/NoelieChairWWhiteCushionSHF20_1x1/$web_pdp_main_carousel_lg$/200623121947/noelie-rattan-lounge-chair-with-white-cushion.jpg",
+      "id": 13
+    },
+    {
+      "title": "MUIR CAMEL VELVET SWIVEL CHAIR",
+      "description": "Swivel chair by Lawson-Fenning draws on the designers' admiration of California interior design in the 1950s and 1960s. Inviting seat fully swivels 360 degrees, appearing to float above a circular base of wood certified sustainable by the Forest Stewardship Council ®. Sumptuous camel-colored velvet finishes things off with a luxurious midcentury-inspired moment. CB2 exclusive.",
+      "price": 1.299,
+      "image": "https://cb2.scene7.com/is/image/CB2/MuirCmlVlvtSwivelChairSHS22/$web_pdp_main_carousel_lg$/220210201545/muir-camel-velvet-swivel-chair.jpg",
+      "id": 14
+    },
+    {
+      "title": "EMBASSY BLACK LOUNGE CHAIR 314 AND OTTOMAN 310 SET",
+      "description": "We put a mixed-material spin on this handsome leather armchair by Paul McCobb by adding a hair on hide back cushion—all in monochromatic black to keep it sleek and sophisticated, down to the black leather welt. Pair with coordinating Embassy Black Ottoman. CB2 exclusive.",
+      "price": 3.799,
+      "image": "https://cb2.scene7.com/is/image/CB2/EmbassyBlackLoungeChairAVSHF21/$web_pdp_main_carousel_lg$/210715162823/embassy-black-lounge-chair-314-and-ottoman-310-set.jpg",
+      "id": 15
     }
   ]
-  
 }

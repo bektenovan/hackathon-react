@@ -25,10 +25,10 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import Favorite from "@mui/icons-material/Favorite";
 
 const pages = [, "", ""];
-const settings = ["Profile", "Cart", "Logout"];
+const settings = [];
 
 const Header = () => {
-
+  const { currentUser, logOut } = useContext(authProductContext)
   const { count, getBasket } = useContext(basketContext)
   console.log(getBasket);
   useEffect(() => {
@@ -75,7 +75,8 @@ const Header = () => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Sylvester",
+                fontFamily: "GT America Burrow",
+                height: "3.rem",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "#ff77a9",
@@ -237,16 +238,34 @@ const Header = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}>
                 {settings.map(setting => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <MenuItem key={setting} onClick={handleCloseUserMenu} >
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
+                {/* <Link to='/login'><MenuItem
+                  onClick={() => {
+                    handleCloseUserMenu();
+                  }}>LogIn</MenuItem> */}
+
+                {currentUser ?
+                  (<MenuItem
+                    onClick={() => {
+                      handleCloseUserMenu();
+                      logOut()
+                    }}>LogOut</MenuItem>) :
+                  (<Link to='/login'><MenuItem
+                    onClick={() => {
+                      handleCloseUserMenu();
+                    }}>LogIn</MenuItem>
+                  </Link>)}
+
+
               </Menu>
             </Box>
           </Toolbar>
         </Container>
       </Box>
-    </AppBar>
+    </AppBar >
   );
 };
 export default Header;

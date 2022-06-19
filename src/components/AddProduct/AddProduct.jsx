@@ -12,6 +12,25 @@ import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext";
 
 // title, description, price, image
+const currencies = [
+  {
+    value: 'USD',
+    label: '$',
+  },
+  {
+    value: 'EUR',
+    label: '€',
+  },
+  {
+    value: 'BTC',
+    label: '฿',
+  },
+  {
+    value: 'JPY',
+    label: '¥',
+  },
+];
+
 
 const AddProduct = () => {
   const { createProduct } = useContext(productsContext);
@@ -66,6 +85,7 @@ const AddProduct = () => {
             variant="standard"
             style={{ margin: "10px" }}
           />
+         
           <TextField
             value={description}
             onChange={e => setDescription(e.target.value)}
@@ -74,6 +94,7 @@ const AddProduct = () => {
             variant="standard"
             style={{ margin: "10px" }}
           />
+          
           <TextField
             type="number"
             value={price}

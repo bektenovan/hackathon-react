@@ -19,6 +19,7 @@ import { productsContext } from "../../contexts/ProductsContext";
 import { AddShoppingCart } from "@mui/icons-material";
 import { createTheme } from "@mui/material/styles";
 import { basketContext } from "../../contexts/basketContext";
+import { authProductContext } from "../../contexts/authProductContext";
 const theme = createTheme({
   status: {
     danger: "#ff77a9",
@@ -37,6 +38,7 @@ const theme = createTheme({
 const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
   const { addProductToBasket, checkProductInBasket } = useContext(basketContext);
+  const { isAdmin } = useContext(authProductContext)
   const [checkProduct, setCheckProduct] = useState(checkProductInBasket(item));
   const { deleteProduct, getOneProduct, oneProduct } =
     useContext(productsContext);
@@ -83,13 +85,13 @@ const ProductCard = ({ item, id }) => {
       </CardContent>
       <CardActions>
         {/*! icons added as components */}
-
-        <Button size="small" onClick={() => deleteProduct(item.id)}>
+        {isAdmin ? (<><Button size="small" onClick={() => deleteProduct(item.id)}>
           <DeleteIcon />
         </Button>
-        <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-          <EditIcon />
-        </Button>
+          <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+            <EditIcon />
+          </Button> </>) : null}
+
         <Button
           onClick={() => {
             addProductToBasket(item);
