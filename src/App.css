@@ -128,6 +128,26 @@ body {
 .payback{
   background-color: bisque ;
 }
+
+@media all and (max-width: 1200px){ 
+  .add {
+     width: 1150px;
+  } 
+}
+@media all and (max-width: 425px){ 
+  .add {
+     width: 850px;
+  } 
+}@media all and (max-width: 375px){ 
+  .add {
+     width: 750px;
+  } 
+}
+@media all and (max-width: 320px){ 
+  .add {
+     width: 700px;
+  } 
+}
 @media all and (max-width: 1200px){ 
   .head {
      width: 1150px;
@@ -315,6 +335,69 @@ body {
    width: 800px;
   } 
 }
+@media all and (max-width: 618px) {
+  .collections-text {
+    font-size: 30px;
+  }
+}
+@media all and (max-width: 450px) {
+  .collections {
+    width: 400px;
+    padding-left: 20px;
+  }
+}
+@media all and (max-width: 400px) {
+  .head {
+    width: 400px;
+  }
+}
+@media all and (max-width: 339px) {
+  .head {
+    width: 400px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .field {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .nomad {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
+@media all and (max-width: 1150px) {
+  .range {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
+@media all and (max-width: 711px) {
+  .basket {
+    width: 100%;
+  }
+}
+@media all and (max-width: 690px) {
+  .basket {
+    width: 700px;
+  }
+}
+@media all and (max-width: 676px) {
+  .head {
+    width: 700px;
+  }
+}
+@media all and (max-width: 875px) {
+  .add {
+    width: 100%;
+    background-size: 100%;
+  }
+  .add-box {
+    width: 100%;
+  }}
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
 

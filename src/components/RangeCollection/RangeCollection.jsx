@@ -4,6 +4,7 @@ import React from "react";
 const RangeCollection = () => {
     return (
         <Box
+          className="range"
             style={{
                 display: "flex",
                 justifyContent: "space-between",

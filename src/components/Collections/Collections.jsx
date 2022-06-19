@@ -27,8 +27,10 @@ const Collections = ({ item, id }) => {
   const { products } = useContext(productsContext);
   const navigate = useNavigate();
   return (
-    <>
+
+    <Box className="collections">
       <Typography
+        className="collections-text"
         variant="h3"
         style={{
           display: "flex",
@@ -80,7 +82,9 @@ const Collections = ({ item, id }) => {
           />
         </Card>
       </Box>
-    </>
+    </Box>
+
+
   );
 };
 

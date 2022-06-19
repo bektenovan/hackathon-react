@@ -4,6 +4,7 @@ import React from "react";
 const NomadCollection = () => {
     return (
         <Box
+        className="nomad"
             style={{
                 display: "flex",
                 justifyContent: "space-between",

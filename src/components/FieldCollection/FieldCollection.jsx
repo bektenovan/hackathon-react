@@ -14,6 +14,7 @@ import React from "react";
 const FieldCollection = () => {
     return (
         <Box
+        className="field"
             style={{
                 display: "flex",
                 justifyContent: "space-between",
