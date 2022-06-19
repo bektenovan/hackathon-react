@@ -11,49 +11,26 @@ import React, { useEffect, useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import InfoIcon from "@mui/icons-material/Info";
-
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { productsContext } from "../../contexts/ProductsContext";
-// import { CartContext } from "../../contexts/cartContext";
 import { AddShoppingCart } from "@mui/icons-material";
-import { createTheme } from "@mui/material/styles";
 import { basketContext } from "../../contexts/basketContext";
-const theme = createTheme({
-  status: {
-    danger: "#ff77a9",
-  },
-  palette: {
-    primary: {
-      main: "#0971f1",
-      darker: "#053e85",
-    },
-    neutral: {
-      main: "#64748B",
-      contrastText: "#fff",
-    },
-  },
-});
+import { authProductContext } from "../../contexts/authProductContext";
+
 const ProductCard = ({ item, id }) => {
   const navigate = useNavigate();
   const { addProductToBasket, checkProductInBasket } =
     useContext(basketContext);
+  const { isAdmin } = useContext(authProductContext);
   const [checkProduct, setCheckProduct] = useState(checkProductInBasket(item));
-  const { deleteProduct, getOneProduct, oneProduct } =
-    useContext(productsContext);
+  const { deleteProduct } = useContext(productsContext);
   const [ratingValue, setRatingValue] = React.useState(null);
   console.log(ratingValue);
   const handleChange = (e, newValue) => {
     setRatingValue(newValue);
   };
-  // useEffect(() => {
-  //   getOneProduct(id);
-  // }, [oneProduct]);
-  // console.log(setRatingValue);
-  // const { addProductToCart, checkProductInCart } = useContext(CartContext);
-  // const [checkProduct, setCheckProduct] = useState(checkProductInCart(item));
 
-  // console.log(item);
   return (
     <Card sx={{ maxWidth: 345, margin: "10px" }}>
       <CardMedia
@@ -63,7 +40,11 @@ const ProductCard = ({ item, id }) => {
         image={item.image}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h6"
+          component="div"
+          color="text.secondary">
           {item.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -84,13 +65,17 @@ const ProductCard = ({ item, id }) => {
       </CardContent>
       <CardActions>
         {/*! icons added as components */}
+        {isAdmin ? (
+          <>
+            <Button size="small" onClick={() => deleteProduct(item.id)}>
+              <DeleteIcon />
+            </Button>
+            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+              <EditIcon />
+            </Button>{" "}
+          </>
+        ) : null}
 
-        <Button size="small" onClick={() => deleteProduct(item.id)}>
-          <DeleteIcon />
-        </Button>
-        <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-          <EditIcon />
-        </Button>
         <Button
           onClick={() => {
             addProductToBasket(item);

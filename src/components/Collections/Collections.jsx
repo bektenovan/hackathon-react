@@ -25,18 +25,20 @@ const Collections = (item, id) => {
   const { products } = useContext(productsContext);
   const navigate = useNavigate();
   return (
-    <>
+    <Box className="collections">
       <Typography
+        className="collections-text"
         variant="h3"
         style={{
           display: "flex",
           justifyContent: "center",
           paddingTop: "40px",
-          color: "#ff77a9",
+          color: "black   ",
           fontFamily: " GT America Burrow",
         }}>
         Explore each unique collection
       </Typography>
+
       <Box
         style={{
           display: "flex",
@@ -78,7 +80,7 @@ const Collections = (item, id) => {
           />
         </Card>
       </Box>
-    </>
+    </Box>
   );
 };
 

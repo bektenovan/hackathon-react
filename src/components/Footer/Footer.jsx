@@ -23,17 +23,17 @@ export default function Footer() {
                 Help
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/about-us" color="inherit">
                   Contact
                 </Link>
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/about-us" color="inherit">
                   Support
                 </Link>
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/about-us" color="inherit">
                   Privacy Policy
                 </Link>
               </Box>
@@ -43,7 +43,7 @@ export default function Footer() {
                 Account
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/login" color="inherit">
                   Account
                 </Link>
               </Box>
@@ -63,17 +63,17 @@ export default function Footer() {
                 Messages
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/about-us" color="inherit">
                   Messages
                 </Link>
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/about-us" color="inherit">
                   Backup
                 </Link>
               </Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/about-us" color="inherit">
                   History
                 </Link>
               </Box>

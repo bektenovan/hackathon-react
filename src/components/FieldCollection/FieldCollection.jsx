@@ -5,6 +5,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Container,
   IconButton,
   Typography,
 } from "@mui/material";
@@ -14,23 +15,14 @@ import { useNavigate } from "react-router-dom";
 
 const FieldCollection = () => {
   return (
-    <Box
+    <Container
+      className="field"
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         marginTop: "80px",
-        marginBottom: "40px",
-        marginLeft: "20px",
-        marginRight: "20px",
       }}>
-      {/* <Typography>All Seating</Typography>
-      <Typography>
-        The main feature of any living room is always going to be the seating.
-        Pick and choose your seating styles to build the perfect place to relax.
-        Unwind by yourself, spend time with your family, or entertain guests,
-        all in ultimate comfort.
-      </Typography> */}
-      <Card sx={{ maxWidth: 345 }}>
+      <Card>
         <CardMedia
           component="img"
           height="194"
@@ -48,15 +40,13 @@ const FieldCollection = () => {
             <AddShoppingCart />
           </IconButton> */}
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
-      <Card sx={{ maxWidth: 345 }}>
+
+      <Card>
         <CardMedia
           component="img"
           height="194"
-          image="https://media.graphassets.com/resize=w:2400,fit:crop/output=format:webp/compress/IKCCuuqoRhiwA9dvkQhM"
+          image="https://media.graphassets.com/resize=w:2400,fit:crop/output=format:webp/compress/xehq1HwZRCKpJVOtfLnh"
           alt="Paella dish"
         />
         <CardContent>
@@ -67,11 +57,8 @@ const FieldCollection = () => {
             $1905
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card>
         <CardMedia
           component="img"
           height="194"
@@ -86,11 +73,8 @@ const FieldCollection = () => {
             $990
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card>
         <CardMedia
           component="img"
           height="194"
@@ -105,11 +89,8 @@ const FieldCollection = () => {
             $590
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
-    </Box>
+    </Container>
   );
 };
 

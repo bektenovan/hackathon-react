@@ -5,20 +5,19 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Container,
   Typography,
 } from "@mui/material";
 import React from "react";
 
 const RangeCollection = () => {
   return (
-    <Box
+    <Container
+      className="range"
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         marginTop: "80px",
-        marginBottom: "40px",
-        marginLeft: "20px",
-        marginRight: "20px",
       }}>
       {/* <Typography>All Seating</Typography>
   <Typography>
@@ -42,9 +41,6 @@ const RangeCollection = () => {
             $2220
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -61,9 +57,6 @@ const RangeCollection = () => {
             $1995
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -80,9 +73,6 @@ const RangeCollection = () => {
             $425
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -99,11 +89,8 @@ const RangeCollection = () => {
             $1070
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Add to cart</Button>
-        </CardActions>
       </Card>
-    </Box>
+    </Container>
   );
 };
 

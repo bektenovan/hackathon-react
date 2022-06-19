@@ -30,7 +30,10 @@ const Comment = ({
   return (
     <div key={comment.id} className="comment">
       <div className="comment-image-container">
-        <img src="/user-icon.png" />
+        <img
+          width={"50px"}
+          src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png"
+        />
       </div>
       <div className="comment-right-part">
         <div className="comment-content">
