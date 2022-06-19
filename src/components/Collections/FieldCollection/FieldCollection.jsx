@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const FieldCollection = () => {
   return (
@@ -48,7 +49,7 @@ const FieldCollection = () => {
           </IconButton> */}
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Add to cart</Button>
         </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
@@ -67,7 +68,7 @@ const FieldCollection = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Add to cart</Button>
         </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
@@ -86,7 +87,7 @@ const FieldCollection = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Add to cart</Button>
         </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
@@ -105,7 +106,7 @@ const FieldCollection = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Add to cart</Button>
         </CardActions>
       </Card>
     </Box>

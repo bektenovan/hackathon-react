@@ -1,4 +1,12 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 const NomadCollection = () => {
@@ -34,6 +42,9 @@ const NomadCollection = () => {
             $2495
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -50,6 +61,9 @@ const NomadCollection = () => {
             $6295
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -66,6 +80,9 @@ const NomadCollection = () => {
             $2690
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -82,6 +99,9 @@ const NomadCollection = () => {
             $1990
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
     </Box>
   );

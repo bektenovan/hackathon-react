@@ -1,4 +1,12 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 const RangeCollection = () => {
@@ -34,6 +42,9 @@ const RangeCollection = () => {
             $2220
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -50,6 +61,9 @@ const RangeCollection = () => {
             $1995
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -66,6 +80,9 @@ const RangeCollection = () => {
             $425
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -82,6 +99,9 @@ const RangeCollection = () => {
             $1070
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small">Add to cart</Button>
+        </CardActions>
       </Card>
     </Box>
   );

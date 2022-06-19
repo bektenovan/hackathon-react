@@ -19,6 +19,7 @@ import CommentsForm from "./components/CommentsForm/CommentsForm";
 import AboutUs from "./components/AboutUs/AboutUs";
 import RangeCollection from "./components/Collections/RangeCollection/RangeCollection";
 import NomadCollection from "./components/Collections/NomadCollection/NomadCollection";
+
 const Routing = () => {
   return (
     <BrowserRouter>
