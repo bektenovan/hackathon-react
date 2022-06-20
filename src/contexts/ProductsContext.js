@@ -10,6 +10,7 @@ const INIT_STATE = {
   oneProduct: null,
   pages: 0,
 };
+ßß
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
