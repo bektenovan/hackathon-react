@@ -3,21 +3,21 @@ import axios from "axios";
 
 export const productsContext = React.createContext();
 // const API = "http://localhost:8000/data";
-const API = "https://rainbow-react-hackathon.herokuapp.com/data"
+const API = "https://rainbow-react-hackathon.herokuapp.com/data";
 
 const INIT_STATE = {
   products: [],
   oneProduct: null,
   pages: 0,
 };
-ßß
+
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
       return {
         ...state,
         products: action.payload.data,
-        pages: Math.ceil(action.payload.headers["x-total-count"] /3),
+        pages: Math.ceil(action.payload.headers["x-total-count"] / 3),
       };
     case "GET_ONE_PRODUCT":
       return { ...state, oneProduct: action.payload };
