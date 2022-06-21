@@ -68,7 +68,7 @@ const Header = () => {
                 style={{ color: "white" }}
                 sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
               />
-              <Typography
+              <Link to="/">    <Typography
                 variant="h6"
                 noWrap
                 component="a"
@@ -84,13 +84,12 @@ const Header = () => {
                   textDecoration: "none",
                 }}>
                 Rainbow
-              </Typography>
-
-              <Typography
+              </Typography></Link>
+              <Link to="/products"> <Typography
                 variant="h6"
                 noWrap
                 component="a"
-                href="/products"
+
                 sx={{
                   mr: 2,
                   display: { xs: "none", md: "flex" },
@@ -101,12 +100,12 @@ const Header = () => {
                   textDecoration: "none",
                 }}>
                 Products
-              </Typography>
-              <Typography
+              </Typography></Link>
+              <Link to="/collections"> <Typography
                 variant="h6"
                 noWrap
                 component="a"
-                href="/collections"
+
                 sx={{
                   mr: 2,
                   display: { xs: "none", md: "flex" },
@@ -117,12 +116,11 @@ const Header = () => {
                   textDecoration: "none",
                 }}>
                 Collections
-              </Typography>
-              <Typography
+              </Typography></Link>
+              <Link to="/about-us"> <Typography
                 variant="h6"
                 noWrap
                 component="a"
-                href="/about-us"
                 sx={{
                   mr: 2,
                   display: { xs: "none", md: "flex" },
@@ -133,7 +131,8 @@ const Header = () => {
                   textDecoration: "none",
                 }}>
                 AboutUs
-              </Typography>
+              </Typography></Link>
+
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <IconButton
                   size="large"
